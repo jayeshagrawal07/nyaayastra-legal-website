@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nyaayastra Legal LLP | Where Justice Shines and Law Prevails</title>
+<meta name="description" content="Nyaayastra Legal LLP – Premier law firm in Indore offering civil, criminal, corporate, property, and family law services. Advocates in Indore, legal services Indore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-mid: #0f2040;
+    --navy-light: #162b4d;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-pale: #f5e8c0;
+    --white: #f8f4ee;
+    --gray: #8a8a8a;
+    --border: rgba(201,168,76,0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+
+  .gold { color: var(--gold); }
+  .section-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 1.4rem 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.4s, backdrop-filter 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(10,22,40,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 42px;
+    width: 42px;
+    object-fit: contain;
+  }
+  .nav-logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .nav-logo-text span {
+    display: block;
+    font-size: 0.55rem;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(248,244,238,0.75);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    border: 1px solid var(--gold);
+    color: var(--gold) !important;
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    transition: background 0.3s !important;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--navy) !important; }
+  .nav-cta::after { display: none !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px; height: 1px;
+    background: var(--gold);
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 10rem 5vw 6rem;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(15,32,64,0.9) 0%, var(--navy) 70%);
+  }
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 65vw; height: 130vh;
+    background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-line-deco {
+    position: absolute;
+    top: 0; bottom: 0; right: 42%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--border) 30%, var(--border) 70%, transparent);
+    opacity: 0.5;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    animation: fadeUp 1.2s ease both;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    border: 1px solid var(--border);
+    padding: 0.5rem 1.2rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2.5rem;
+    animation: fadeUp 1s ease 0.2s both;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  h1.hero-title {
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+    animation: fadeUp 1s ease 0.35s both;
+  }
+  h1.hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .hero-tagline {
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: rgba(248,244,238,0.6);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    animation: fadeUp 1s ease 0.5s both;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: fadeUp 1s ease 0.65s both;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 0.9rem 2.4rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--white);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .btn-secondary:hover { color: var(--gold); border-color: var(--gold); }
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem; left: 5vw;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(248,244,238,0.4);
+    z-index: 2;
+    animation: fadeUp 1s ease 1s both;
+  }
+  .hero-scroll::before {
+    content: '';
+    width: 40px; height: 1px;
+    background: var(--border);
+  }
+  .hero-logo-display {
+    position: absolute;
+    right: 5vw; top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    opacity: 0.15;
+    width: min(45vw, 520px);
+    animation: fadeIn 2s ease 0.5s both;
+  }
+  .hero-logo-display img { width: 100%; }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgba(15,32,64,0.5);
+  }
+  .stat-item {
+    padding: 2.5rem 5vw;
+    border-right: 1px solid var(--border);
+    text-align: center;
+    transition: background 0.3s;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-item:hover { background: rgba(201,168,76,0.04); }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(248,244,238,0.5);
+    margin-top: 0.5rem;
+    display: block;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 7rem 5vw; }
+
+  .section-header {
+    margin-bottom: 4rem;
+    max-width: 600px;
+  }
+  .section-header h2 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+  }
+  .section-header p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(248,244,238,0.6);
+  }
+  .divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 1.5rem 0;
+  }
+
+  /* ── ABOUT ── */
+  #about {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    position: relative;
+  }
+  #about::before {
+    content: '"';
+    position: absolute;
+    top: 3rem; right: 5vw;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20rem;
+    color: rgba(201,168,76,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: rgba(248,244,238,0.72);
+    margin-bottom: 1.5rem;
+  }
+  .about-text p strong { color: var(--gold-light); font-weight: 400; }
+  .founders-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .founder-card {
+    border: 1px solid var(--border);
+    padding: 2rem 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .founder-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s;
+    transform-origin: left;
+  }
+  .founder-card:hover::before { transform: scaleX(1); }
+  .founder-card:hover { border-color: rgba(201,168,76,0.5); transform: translateY(-4px); }
+  .founder-initials {
+    width: 52px; height: 52px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .founder-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--white);
+  }
+  .founder-card .degree {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .founder-card p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: rgba(248,244,238,0.55);
+  }
+
+  /* ── PRACTICE AREAS ── */
+  #practice {
+    border-top: 1px solid var(--border);
+  }
+  .practice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .practice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .practice-card {
+    background: var(--navy);
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    transition: background 0.4s;
+  }
+  .practice-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 0;
+    background: linear-gradient(to top, rgba(201,168,76,0.06), transparent);
+    transition: height 0.4s;
+  }
+  .practice-card:hover { background: var(--navy-mid); }
+  .practice-card:hover::after { height: 100%; }
+  .practice-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: rgba(201,168,76,0.12);
+    position: absolute;
+    top: 1.5rem; right: 2rem;
+    line-height: 1;
+  }
+  .practice-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .practice-card h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--white);
+    transition: color 0.3s;
+  }
+  .practice-card:hover h3 { color: var(--gold-light); }
+  .practice-card p {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    color: rgba(248,244,238,0.5);
+  }
+
+  /* ── WHY US ── */
+  #why {
+    background: var(--navy-mid);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+  .why-item {
+    position: relative;
+    padding-top: 1.5rem;
+  }
+  .why-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 30px; height: 1px;
+    background: var(--gold);
+  }
+  .why-item h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 1rem 0 0.75rem;
+    color: var(--white);
+  }
+  .why-item p {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    color: rgba(248,244,238,0.55);
+  }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials {
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3.5rem;
+  }
+  .testimonial-card {
+    border: 1px solid var(--border);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .testimonial-card:hover { border-color: rgba(201,168,76,0.45); transform: translateY(-5px); }
+  .testimonial-card .quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: 0.3;
+    line-height: 0.6;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-card p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: rgba(248,244,238,0.72);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.2rem;
+  }
+  .author-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--navy-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--navy);
+    font-weight: 700;
+  }
+  .author-info .name {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+  .author-info .role {
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+  .stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 1rem; }
+
+  /* ── FAQ ── */
+  #faq {
+    background: var(--navy-mid);
+    border-top: 1px solid var(--border);
+  }
+  .faq-list { margin-top: 3rem; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--white);
+    text-align: left;
+    padding: 1.8rem 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+  }
+  .faq-q:hover { color: var(--gold-light); }
+  .faq-q .icon {
+    width: 28px; height: 28px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform 0.3s, background 0.3s;
+  }
+  .faq-item.open .faq-q .icon {
+    transform: rotate(45deg);
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: rgba(248,244,238,0.6);
+  }
+  .faq-item.open .faq-a { max-height: 200px; padding-bottom: 1.8rem; }
+
+  /* ── CONTACT ── */
+  #contact {
+    border-top: 1px solid var(--border);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 6rem;
+    align-items: start;
+  }
+  .contact-info h2 {
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+  .contact-detail {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  .contact-detail .icon-wrap {
+    width: 40px; height: 40px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+    color: var(--gold);
+  }
+  .contact-detail .detail-text .label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .contact-detail .detail-text a,
+  .contact-detail .detail-text p {
+    font-size: 0.9rem;
+    color: rgba(248,244,238,0.75);
+    text-decoration: none;
+    line-height: 1.6;
+    transition: color 0.3s;
+  }
+  .contact-detail .detail-text a:hover { color: var(--gold-light); }
+
+  .contact-form { display: grid; gap: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-field { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-field label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    background: rgba(15,32,64,0.6);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 0.9rem 1.2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+    transition: border-color 0.3s;
+    resize: vertical;
+    -webkit-appearance: none;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus { border-color: var(--gold); }
+  .form-field input::placeholder,
+  .form-field textarea::placeholder { color: rgba(248,244,238,0.3); }
+  .form-field select option { background: var(--navy-mid); }
+  textarea { min-height: 120px; }
+
+  .form-submit {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  .form-note { font-size: 0.75rem; color: rgba(248,244,238,0.4); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid var(--border);
+    padding: 4rem 5vw 2rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .footer-brand p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: rgba(248,244,238,0.5);
+    margin-top: 1rem;
+    max-width: 260px;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .footer-logo img {
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
+  }
+  .footer-logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.06em;
+  }
+  .footer-col h5 {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 0.8rem; }
+  .footer-col ul a {
+    font-size: 0.85rem;
+    color: rgba(248,244,238,0.55);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-col ul a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: rgba(248,244,238,0.35);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+  /* ── WHATSAPP BUTTON ── */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    z-index: 999;
+    width: 56px; height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: pulse 2.5s infinite;
+  }
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+  }
+
+  /* ── MOBILE NAV OVERLAY ── */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,22,40,0.98);
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+  }
+  .mobile-menu.open { transform: translateX(0); }
+  .mobile-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+  .mobile-close {
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    background: none; border: none;
+    color: var(--gold);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.15; }
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 4px 30px rgba(37,211,102,0.65); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .practice-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+    .testimonials-grid { grid-template-columns: 1fr; max-width: 520px; }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .practice-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .founders-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero-logo-display { display: none; }
+    section { padding: 5rem 5vw; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#practice" onclick="toggleMenu()">Practice Areas</a>
+  <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-logo" href="#">
+    <img src="/mnt/user-data/uploads/logo-esign-2.jpg" alt="Nyaayastra Legal Logo" onerror="this.style.display='none'">
+    <div class="nav-logo-text">
+      Nyaayastra Legal
+      <span>LLP · Advocates & Consultants</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#practice">Practice Areas</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nav-cta">Consult Us</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-line-deco"></div>
+  <div class="hero-logo-display">
+    <img src="/mnt/user-data/uploads/logo-esign-2.jpg" alt="" onerror="this.style.display='none'">
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">Nyaayastra Legal LLP · Est. Indore</div>
+    <h1 class="hero-title">Where <em>Justice</em><br>Shines &amp; Law<br>Prevails</h1>
+    <p class="hero-tagline">Premier Legal Counsel · Vijay Nagar, Indore</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Book a Consultation</a>
+      <a href="#about" class="btn-secondary">Our Firm →</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to explore</div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <span class="stat-number">2+</span>
+    <span class="stat-label">Years of Practice</span>
+  </div>
+  <div class="stat-item reveal">
+    <span class="stat-number">6</span>
+    <span class="stat-label">Practice Areas</span>
+  </div>
+  <div class="stat-item reveal">
+    <span class="stat-number">2</span>
+    <span class="stat-label">Expert Advocates</span>
+  </div>
+  <div class="stat-item reveal">
+    <span class="stat-number">100%</span>
+    <span class="stat-label">Client Commitment</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-header reveal">
+        <span class="section-label">About the Firm</span>
+        <h2>Dedicated to <span class="gold">Justice,</span><br>Guided by Integrity</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="about-text reveal">
+        <p>Nyaayastra Legal LLP is a <strong>boutique law firm</strong> based in Vijay Nagar, Indore, built on the pillars of legal excellence, ethical practice, and unwavering commitment to our clients. We believe that justice is not merely a legal outcome — it is a right that every individual deserves to pursue with confidence.</p>
+        <p>Our approach is deeply <strong>client-centric</strong>. We take time to understand each client's unique situation, explain legal complexities in plain language, and craft strategies that serve their best interests. From individual disputes to complex corporate matters, we handle every case with the same diligence and dedication.</p>
+        <a href="#contact" class="btn-primary" style="margin-top:1rem; display:inline-block;">Schedule a Meeting</a>
+      </div>
+    </div>
+    <div>
+      <span class="section-label reveal">Our Founders</span>
+      <div class="founders-grid">
+        <div class="founder-card reveal">
+          <div class="founder-initials">GK</div>
+          <h4>Adv. Gaurav Khandelwal</h4>
+          <p class="degree">B.B.A. LL.B. (Hons.)</p>
+          <p>Specializes in civil and corporate law, bringing strategic counsel to complex matters with clarity and precision.</p>
+        </div>
+        <div class="founder-card reveal">
+          <div class="founder-initials">AA</div>
+          <h4>Adv. Aman Agrawal</h4>
+          <p class="degree">B.B.A. LL.B. (Hons.)</p>
+          <p>Expert in criminal and property law, known for thorough research and compelling advocacy before the courts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section id="practice">
+  <div class="practice-header reveal">
+    <div class="section-header" style="margin-bottom:0">
+      <span class="section-label">What We Do</span>
+      <h2>Our Practice Areas</h2>
+    </div>
+  </div>
+  <div class="practice-grid">
+    <div class="practice-card reveal">
+      <span class="practice-num">01</span>
+      <span class="practice-icon">⚖️</span>
+      <h3>Civil Law</h3>
+      <p>Representation in civil disputes including property conflicts, contract breaches, and tort matters. We advocate vigorously for your rights in civil proceedings.</p>
+    </div>
+    <div class="practice-card reveal">
+      <span class="practice-num">02</span>
+      <span class="practice-icon">🔒</span>
+      <h3>Criminal Law</h3>
+      <p>Strong defense and prosecution services across all categories of criminal cases. We ensure your rights are protected at every stage of criminal proceedings.</p>
+    </div>
+    <div class="practice-card reveal">
+      <span class="practice-num">03</span>
+      <span class="practice-icon">🏢</span>
+      <h3>Corporate Law</h3>
+      <p>Comprehensive legal support for businesses — from incorporation and compliance to mergers, agreements, and dispute resolution.</p>
+    </div>
+    <div class="practice-card reveal">
+      <span class="practice-num">04</span>
+      <span class="practice-icon">🏠</span>
+      <h3>Property &amp; Real Estate</h3>
+      <p>Expert guidance on property transactions, title disputes, RERA matters, and all real estate legal requirements in Madhya Pradesh.</p>
+    </div>
+    <div class="practice-card reveal">
+      <span class="practice-num">05</span>
+      <span class="practice-icon">👨‍👩‍👧</span>
+      <h3>Family Law</h3>
+      <p>Sensitive and thorough handling of matrimonial disputes, divorce, custody, maintenance, and succession matters with empathy and professionalism.</p>
+    </div>
+    <div class="practice-card reveal">
+      <span class="practice-num">06</span>
+      <span class="practice-icon">📋</span>
+      <h3>Legal Advisory</h3>
+      <p>Strategic legal consultation for individuals and organizations on contracts, compliance, risk assessment, and preventive legal planning.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-header reveal" style="max-width:100%; margin-bottom:3.5rem;">
+    <span class="section-label">Why Choose Us</span>
+    <h2>The Nyaayastra <span class="gold">Difference</span></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-item reveal">
+      <h4>Client-First Approach</h4>
+      <p>Every decision is made with your interests at the forefront. We listen, advise honestly, and stand by you through every stage of your case.</p>
+    </div>
+    <div class="why-item reveal">
+      <h4>Ethical Practice</h4>
+      <p>Our firm is built on integrity. We believe in transparent communication, honest assessments, and fair billing — no surprises.</p>
+    </div>
+    <div class="why-item reveal">
+      <h4>Court &amp; Advisory</h4>
+      <p>Whether it's litigation in the High Court or boardroom advisory, our dual expertise in court practice and corporate law sets us apart.</p>
+    </div>
+    <div class="why-item reveal">
+      <h4>Local Expertise</h4>
+      <p>Deep roots in Indore's legal landscape with strong understanding of local judiciary practices, giving you a meaningful advantage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-header reveal">
+    <span class="section-label">Client Stories</span>
+    <h2>What Our Clients <span class="gold">Say</span></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <span class="quote-mark">"</span>
+      <p>Adv. Gaurav handled my property dispute with remarkable thoroughness. His knowledge of local real estate law and calm guidance during a stressful time was invaluable. The outcome exceeded my expectations.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">R</div>
+        <div class="author-info">
+          <div class="name">Rajesh Sharma</div>
+          <div class="role">Property Dispute Client</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <span class="quote-mark">"</span>
+      <p>Adv. Aman's expertise in family law guided me through an extremely difficult divorce proceeding. He was professional, compassionate, and always explained every step clearly. Highly recommend Nyaayastra Legal.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">P</div>
+        <div class="author-info">
+          <div class="name">Priya Mehta</div>
+          <div class="role">Family Law Client</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <span class="quote-mark">"</span>
+      <p>As a startup founder, I needed reliable legal counsel for incorporation and agreements. Nyaayastra Legal delivered everything on time with clear documentation. Their corporate advisory is top-notch.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">V</div>
+        <div class="author-info">
+          <div class="name">Vikram Joshi</div>
+          <div class="role">Corporate Client</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-header reveal">
+    <span class="section-label">Common Questions</span>
+    <h2>Frequently Asked <span class="gold">Questions</span></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How do I schedule an initial consultation?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">You can reach us via phone at 82690-39091 or 96444-89491, email us at nyaayastralegal@gmail.com, or fill out the contact form on this website. We typically respond within 24 hours to schedule your consultation.</div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What should I bring to my first meeting?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">Please bring any documents relevant to your legal matter — contracts, notices, court documents, property papers, or correspondence. A brief written summary of your situation helps us prepare and make the most of your consultation time.</div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Do you offer services outside Indore?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">While our primary office is in Vijay Nagar, Indore, we handle matters across Madhya Pradesh courts and can provide advisory services for clients throughout India. Contact us to discuss your specific requirements.</div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How are legal fees structured?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">Our fees vary based on the nature and complexity of the case. We discuss fee structures transparently at the outset — offering fixed fees for advisory services and case-based structures for litigation. We believe in fair, clear billing with no hidden costs.</div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What is the typical duration of a legal case?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">Case duration varies widely based on the type of matter, court calendar, and complexity. During our initial consultation, we provide realistic timelines based on our experience with similar cases and keep you updated at every milestone.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <span class="section-label reveal">Get in Touch</span>
+      <h2 class="reveal">Let's Discuss Your <span class="gold">Legal Matter</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal" style="color:rgba(248,244,238,0.6); font-size:0.9rem; line-height:1.8; margin-bottom:2.5rem;">
+        We are here to listen. Reach out for a confidential consultation — your first step towards clarity and resolution.
+      </p>
+      <div class="contact-detail reveal">
+        <div class="icon-wrap">📍</div>
+        <div class="detail-text">
+          <div class="label">Office Address</div>
+          <p>42, Maa Ambika Nagar, Behind Metro Tower<br>Near Jain Mandir, Vijay Nagar<br>Indore – 452 010, Madhya Pradesh</p>
+        </div>
+      </div>
+      <div class="contact-detail reveal">
+        <div class="icon-wrap">📞</div>
+        <div class="detail-text">
+          <div class="label">Phone</div>
+          <a href="tel:+918269039091">+91 82690-39091</a><br>
+          <a href="tel:+919644489491">+91 96444-89491</a>
+        </div>
+      </div>
+      <div class="contact-detail reveal">
+        <div class="icon-wrap">✉️</div>
+        <div class="detail-text">
+          <div class="label">Email</div>
+          <a href="mailto:nyaayastralegal@gmail.com">nyaayastralegal@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-detail reveal">
+        <div class="icon-wrap">🌐</div>
+        <div class="detail-text">
+          <div class="label">Website</div>
+          <a href="http://www.nyaayastralegal.com" target="_blank">www.nyaayastralegal.com</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-field">
+            <label>Full Name *</label>
+            <input type="text" placeholder="Your full name" required>
+          </div>
+          <div class="form-field">
+            <label>Phone Number *</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-field">
+          <label>Area of Legal Matter *</label>
+          <select required>
+            <option value="">Select practice area…</option>
+            <option>Civil Law</option>
+            <option>Criminal Law</option>
+            <option>Corporate Law</option>
+            <option>Property & Real Estate</option>
+            <option>Family Law</option>
+            <option>Legal Advisory & Consultation</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Brief Description</label>
+          <textarea placeholder="Please describe your legal matter briefly…"></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">Send Message</button>
+          <span class="form-note">We respond within 24 hours</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="/mnt/user-data/uploads/logo-esign-2.jpg" alt="" onerror="this.style.display='none'">
+        <div class="footer-logo-text">Nyaayastra Legal LLP</div>
+      </div>
+      <p>Where Justice Shines and Law Prevails. Committed to providing honest, effective legal representation to every client we serve.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Practice Areas</h5>
+      <ul>
+        <li><a href="#practice">Civil Law</a></li>
+        <li><a href="#practice">Criminal Law</a></li>
+        <li><a href="#practice">Corporate Law</a></li>
+        <li><a href="#practice">Property Law</a></li>
+        <li><a href="#practice">Family Law</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Firm</h5>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#about">Our Founders</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#testimonials">Client Stories</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+918269039091">82690-39091</a></li>
+        <li><a href="tel:+919644489491">96444-89491</a></li>
+        <li><a href="mailto:nyaayastralegal@gmail.com">nyaayastralegal@gmail.com</a></li>
+        <li><a href="#contact">Book Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Nyaayastra Legal LLP · All Rights Reserved · Indore, MP</span>
+    <span>Designed for <a href="#hero">Nyaayastra Legal</a></span>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/918269039091?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation." class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<script>
+  // NAV scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = '#2a6a4a';
+    setTimeout(() => {
+      btn.textContent = 'Send Message';
+      btn.style.background = '';
+      e.target.reset();
+    }, 3500);
+  }
+</script>
+</body>
+</html>
