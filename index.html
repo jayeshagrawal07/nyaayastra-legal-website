@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nyaayastra Legal LLP | Where Justice Shines and Law Prevails</title>
 <meta name="description" content="Nyaayastra Legal LLP – Premier law firm in Indore offering civil, criminal, corporate, property, and family law services. Advocates in Indore, legal services Indore.">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -22,7 +23,7 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5.4rem; }
 
   body {
     background: var(--navy);
@@ -93,13 +94,18 @@
     color: var(--white);
     line-height: 1.2;
   }
-  .nav-logo-text span {
+  .nav-logo-text .subtitle {
     display: block;
     font-size: 0.55rem;
     font-family: 'Jost', sans-serif;
     letter-spacing: 0.3em;
     color: var(--gold);
     font-weight: 400;
+  }
+  .nav-logo-text .llp {
+    font-size: 0.7em;
+    font-weight: 400;
+    opacity: 0.9;
   }
   .nav-links {
     display: flex;
@@ -619,21 +625,31 @@
   }
   .faq-q:hover { color: var(--gold-light); }
   .faq-q .icon {
-    width: 28px; height: 28px;
+    width: 32px; height: 32px;
     border: 1px solid var(--border);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: var(--gold);
+    position: relative;
     flex-shrink: 0;
     transition: transform 0.3s, background 0.3s;
   }
+  .faq-q .icon::before,
+  .faq-q .icon::after {
+    content: '';
+    position: absolute;
+    background: var(--gold);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s;
+  }
+  .faq-q .icon::before { width: 12px; height: 1.5px; }
+  .faq-q .icon::after { width: 1.5px; height: 12px; }
   .faq-item.open .faq-q .icon {
     transform: rotate(45deg);
     background: var(--gold);
-    color: var(--navy);
+  }
+  .faq-item.open .faq-q .icon::before,
+  .faq-item.open .faq-q .icon::after {
+    background: var(--navy);
   }
   .faq-a {
     max-height: 0;
@@ -807,20 +823,21 @@
     bottom: 2rem; right: 2rem;
     z-index: 999;
     width: 56px; height: 56px;
-    background: #25D366;
+    background: var(--navy-mid);
+    border: 1px solid var(--border);
+    color: var(--gold);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    box-shadow: 0 4px 20px rgba(10,22,40,0.4);
     text-decoration: none;
-    font-size: 1.6rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    animation: pulse 2.5s infinite;
+    transition: transform 0.3s, background 0.3s, border-color 0.3s;
   }
   .whatsapp-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+    background: var(--navy);
+    border-color: var(--gold);
   }
 
   /* ── MOBILE NAV OVERLAY ── */
@@ -828,7 +845,7 @@
     position: fixed;
     inset: 0;
     background: rgba(10,22,40,0.98);
-    z-index: 998;
+    z-index: 1001;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -866,10 +883,7 @@
     from { opacity: 0; }
     to { opacity: 0.15; }
   }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
-    50% { box-shadow: 0 4px 30px rgba(37,211,102,0.65); }
-  }
+
 
   .reveal {
     opacity: 0;
@@ -902,7 +916,7 @@
     .founders-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
     .hero-logo-display { display: none; }
-    section { padding: 5rem 5vw; }
+    section { padding: 3.5rem 5vw; }
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
@@ -922,10 +936,10 @@
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-logo" href="#">
-    <img src="/mnt/user-data/uploads/logo-esign-2.jpg" alt="Nyaayastra Legal Logo" onerror="this.style.display='none'">
+    <img src="logo.svg" alt="Nyaayastra Legal Logo" onerror="this.style.display='none'">
     <div class="nav-logo-text">
-      Nyaayastra Legal
-      <span>LLP · Advocates & Consultants</span>
+      Nyaayastra Legal <span class="llp">LLP</span>
+      <span class="subtitle">Advocates & Consultants</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -945,7 +959,7 @@
   <div class="hero-bg"></div>
   <div class="hero-line-deco"></div>
   <div class="hero-logo-display">
-    <img src="/mnt/user-data/uploads/logo-esign-2.jpg" alt="" onerror="this.style.display='none'">
+    <img src="logo.svg" alt="" onerror="this.style.display='none'">
   </div>
   <div class="hero-content">
     <div class="hero-badge">Nyaayastra Legal LLP · Est. Indore</div>
@@ -1146,35 +1160,35 @@
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">
         How do I schedule an initial consultation?
-        <span class="icon">+</span>
+        <span class="icon"></span>
       </button>
       <div class="faq-a">You can reach us via phone at 82690-39091 or 96444-89491, email us at nyaayastralegal@gmail.com, or fill out the contact form on this website. We typically respond within 24 hours to schedule your consultation.</div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">
         What should I bring to my first meeting?
-        <span class="icon">+</span>
+        <span class="icon"></span>
       </button>
       <div class="faq-a">Please bring any documents relevant to your legal matter — contracts, notices, court documents, property papers, or correspondence. A brief written summary of your situation helps us prepare and make the most of your consultation time.</div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">
         Do you offer services outside Indore?
-        <span class="icon">+</span>
+        <span class="icon"></span>
       </button>
       <div class="faq-a">While our primary office is in Vijay Nagar, Indore, we handle matters across Madhya Pradesh courts and can provide advisory services for clients throughout India. Contact us to discuss your specific requirements.</div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">
         How are legal fees structured?
-        <span class="icon">+</span>
+        <span class="icon"></span>
       </button>
       <div class="faq-a">Our fees vary based on the nature and complexity of the case. We discuss fee structures transparently at the outset — offering fixed fees for advisory services and case-based structures for litigation. We believe in fair, clear billing with no hidden costs.</div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">
         What is the typical duration of a legal case?
-        <span class="icon">+</span>
+        <span class="icon"></span>
       </button>
       <div class="faq-a">Case duration varies widely based on the type of matter, court calendar, and complexity. During our initial consultation, we provide realistic timelines based on our experience with similar cases and keep you updated at every milestone.</div>
     </div>
@@ -1202,8 +1216,8 @@
         <div class="icon-wrap">📞</div>
         <div class="detail-text">
           <div class="label">Phone</div>
-          <a href="tel:+918269039091">+91 82690-39091</a><br>
-          <a href="tel:+919644489491">+91 96444-89491</a>
+          <a href="tel:+918269039091">+91 82690-39091 (Adv. Gaurav)</a><br>
+          <a href="tel:+919644489491">+91 96444-89491 (Adv. Aman)</a>
         </div>
       </div>
       <div class="contact-detail reveal">
@@ -1213,13 +1227,7 @@
           <a href="mailto:nyaayastralegal@gmail.com">nyaayastralegal@gmail.com</a>
         </div>
       </div>
-      <div class="contact-detail reveal">
-        <div class="icon-wrap">🌐</div>
-        <div class="detail-text">
-          <div class="label">Website</div>
-          <a href="http://www.nyaayastralegal.com" target="_blank">www.nyaayastralegal.com</a>
-        </div>
-      </div>
+
     </div>
     <div>
       <form class="contact-form reveal" onsubmit="handleSubmit(event)">
@@ -1268,7 +1276,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="/mnt/user-data/uploads/logo-esign-2.jpg" alt="" onerror="this.style.display='none'">
+        <img src="logo.svg" alt="" onerror="this.style.display='none'">
         <div class="footer-logo-text">Nyaayastra Legal LLP</div>
       </div>
       <p>Where Justice Shines and Law Prevails. Committed to providing honest, effective legal representation to every client we serve.</p>
@@ -1296,8 +1304,8 @@
     <div class="footer-col">
       <h5>Contact</h5>
       <ul>
-        <li><a href="tel:+918269039091">82690-39091</a></li>
-        <li><a href="tel:+919644489491">96444-89491</a></li>
+        <li><a href="tel:+918269039091">82690-39091 (Adv. Gaurav)</a></li>
+        <li><a href="tel:+919644489491">96444-89491 (Adv. Aman)</a></li>
         <li><a href="mailto:nyaayastralegal@gmail.com">nyaayastralegal@gmail.com</a></li>
         <li><a href="#contact">Book Consultation</a></li>
       </ul>
@@ -1309,8 +1317,11 @@
   </div>
 </footer>
 
-<!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/918269039091?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation." class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/918269039091?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation." class="whatsapp-btn" target="_blank" title="Chat on WhatsApp" style="text-shadow: none;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+  </svg>
+</a>
 
 <script>
   // NAV scroll
